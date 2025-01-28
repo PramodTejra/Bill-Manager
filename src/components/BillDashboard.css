@@ -1,0 +1,220 @@
+/* General styles for the Bill Dashboard */
+.bill-dashboard {
+    font-family: Arial, sans-serif;
+    max-width: 1200px;
+    /* Full-width for large screens */
+    margin: 20px auto;
+    padding: 30px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.bill-dashboard h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #333;
+    font-size: 3rem;
+}
+
+label {
+    display: block;
+    margin: 15px 0 8px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #555;
+}
+
+input[type="number"],
+select {
+    width: 50%;
+    /* Center-align inputs and dropdowns for large screens */
+    min-width: 300px;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+input[type="number"]::placeholder {
+    color: #aaa;
+}
+
+.error {
+    color: red;
+    font-size: 0.9rem;
+    text-align: center;
+    margin-top: -10px;
+    margin-bottom: 15px;
+}
+
+/* Table Styles */
+.bill-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    margin-bottom: 60px;
+    font-size: 1rem;
+}
+
+.bill-table thead tr {
+    background-color: #007bff;
+    color: #fff;
+    text-align: left;
+}
+
+.bill-table th,
+.bill-table td {
+    padding: 15px;
+    border: 1px solid #ddd;
+}
+
+.bill-table tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Highlighted Bills */
+.highlighted {
+    background-color: #cce5ff;
+    font-weight: bold;
+    transition: background-color 0.3s ease, border-left-color 0.3s ease;
+}
+
+/* Actions Buttons */
+.bill-actions button {
+    padding: 10px 15px;
+    margin-right: 10px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.bill-actions button:hover {
+    opacity: 0.9;
+}
+
+.bill-actions button:nth-child(1) {
+  background-color: #28a745; /* Vibrant green for a positive action */
+  color: #fff; /* White text for contrast */
+  border: 1px solid #1e7e34; /* Darker green border for depth */
+  border-radius: 4px; /* Rounded corners for a modern look */
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transition for hover effects */
+}
+
+.bill-actions button:nth-child(1) {
+    background-color: #4caf50;
+    /* Fresh green color */
+    color: #fff;
+    /* White text for contrast */
+}
+
+
+.bill-actions button:nth-child(2) {
+    background-color: #dc3545;
+    color: #fff;
+}
+
+.bill-actions button:nth-child(1):hover {
+    background-color: #056328;
+}
+
+.bill-actions button:nth-child(2):hover {
+    background-color: #c82333;
+}
+
+/* Form Section Centering */
+.bill-dashboard label,
+.bill-dashboard input,
+.bill-dashboard select {
+    text-align: center;
+}
+
+/* Responsive Design */
+@media (min-width: 1024px) {
+    .bill-dashboard {
+        max-width: 90%;
+        /* Use most of the screen for desktop view */
+    }
+
+    input[type="number"],
+    select {
+        width: 40%;
+        /* Larger inputs for desktop screens */
+        font-size: 1.1rem;
+    }
+
+    .bill-table th,
+    .bill-table td {
+        padding: 20px;
+        font-size: 1.1rem;
+    }
+
+    .bill-actions button {
+        font-size: 1rem;
+        padding: 10px 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .bill-dashboard {
+        padding: 20px;
+    }
+
+    input[type="number"],
+    select {
+        width: 100%;
+        /* Adjust inputs for smaller screens */
+    }
+
+    .bill-table th,
+    .bill-table td {
+        padding: 10px;
+        font-size: 0.9rem;
+    }
+
+    .bill-actions button {
+        font-size: 0.9rem;
+        padding: 8px 12px;
+    }
+}
+
+/* Flexbox for aligning filters horizontally */
+.filters-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+    margin-top: 50px;
+    gap: 50px;
+    /* Space between the two filters */
+}
+
+/* Individual filter styles */
+.filter-item {
+    flex: 1;
+    /* Allow filters to stretch evenly */
+    text-align: center;
+    /* Align labels and inputs to the left */
+}
+
+.filter-item label {
+    display: inline-block;
+    margin-bottom: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #555;
+}
+
+.filter-item input[type="number"],
+.filter-item select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+}

@@ -1,0 +1,47 @@
+/* BillChart Component Styling */
+.bill-chart-container {
+    width: 95%;
+    /* Flexible width */
+    max-width: 1200px;
+    /* Maximum width for larger screens */
+    margin: 0 auto;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Style the canvas to make it flexible */
+canvas {
+    width: 100% !important;
+    /* Full width of the container */
+    height: 500px !important;
+    /* Default height */
+    border-radius: 4px;
+}
+
+/* Responsive Design for Tablets */
+@media (max-width: 768px) {
+    .bill-chart-container {
+        padding: 20px;
+        /* Reduce padding for smaller screens */
+    }
+
+    canvas {
+        height: 400px !important;
+        /* Adjust chart height */
+    }
+}
+
+/* Responsive Design for Mobile Screens */
+@media (max-width: 480px) {
+    .bill-chart-container {
+        padding: 15px;
+        /* Further reduce padding for mobile */
+    }
+
+    canvas {
+        height: 300px !important;
+        /* Adjust chart height for smaller screens */
+    }
+}

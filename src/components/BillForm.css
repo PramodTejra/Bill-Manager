@@ -1,0 +1,166 @@
+/* General styling for the bill form */
+.bill-form {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: #ffffff;
+    /* Clean white background */
+    border-radius: 10px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+    /* Softer shadow for depth */
+    font-family: Arial, sans-serif;
+}
+
+/* Title styling */
+.bill-form .form-title {
+    text-align: center;
+    font-size: 26px;
+    font-weight: 700;
+    /* Bold for emphasis */
+    color: #333333;
+    margin-bottom: 25px;
+}
+
+/* Description styling */
+.bill-form .form-description {
+    color: #666666;
+    font-size: 14px;
+    text-align: center;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+/* Input fields styling */
+.bill-form input,
+.bill-form button {
+    width: 100%;
+    /* Full width for all inputs and buttons */
+    padding: 14px;
+    margin: 12px 0;
+    border: 1px solid #cccccc;
+    border-radius: 6px;
+    font-size: 16px;
+    box-sizing: border-box;
+    /* Ensure padding is included in width */
+    transition: all 0.3s ease;
+}
+
+.bill-form input[type="text"],
+.bill-form input[type="number"],
+.bill-form input[type="date"] {
+    background-color: #f9f9f9;
+    /* Light gray background for inputs */
+    width: 100%;
+    /* Full width for smaller screens */
+    color: #333;
+    /* Darker text for readability */
+}
+
+.bill-form input::placeholder {
+    color: #999999;
+    font-style: italic;
+    /* Placeholder text styling */
+}
+
+.bill-form input:focus {
+    background-color: #ffffff;
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+    /* Subtle glow effect */
+    outline: none;
+}
+
+/* Button styling */
+.bill-form button {
+    background-color: #007bff;
+    /* Primary blue */
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    /* Uppercase text for emphasis */
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+.bill-form button:hover {
+    background-color: #0056b3;
+    /* Darker blue on hover */
+    transform: scale(1.02);
+    /* Slight scaling effect */
+}
+
+.bill-form button:focus {
+    outline: none;
+    border: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+    /* Glow effect */
+}
+
+/* Success and error feedback */
+.bill-form input:focus:valid {
+    border-color: #28a745;
+    /* Green border for valid input */
+    box-shadow: 0 0 5px rgba(40, 167, 69, 0.5);
+    /* Green glow */
+}
+
+.bill-form input:focus:invalid {
+    border-color: #dc3545;
+    /* Red border for invalid input */
+    box-shadow: 0 0 5px rgba(220, 53, 69, 0.5);
+    /* Red glow */
+}
+
+/* Responsive Design for Tablets */
+@media (max-width: 768px) {
+    .bill-form {
+        padding: 20px;
+        /* Reduce padding for tablets */
+    }
+
+    .bill-form .form-title {
+        font-size: 22px;
+        /* Smaller font size for the title */
+    }
+
+    .bill-form input,
+    .bill-form button {
+        font-size: 14px;
+        /* Slightly smaller inputs and buttons */
+        padding: 12px;
+        /* Adjust padding for smaller screens */
+    }
+}
+
+/* Responsive Design for Mobile Screens */
+@media (max-width: 480px) {
+    .bill-form {
+        padding: 15px;
+        /* Further reduce padding for mobile devices */
+    }
+
+    .bill-form .form-title {
+        font-size: 20px;
+        /* Smaller font size for the title */
+        margin-bottom: 20px;
+        /* Adjust spacing */
+    }
+
+    .bill-form input,
+    .bill-form button {
+        font-size: 12px;
+        /* Smaller inputs and buttons */
+        padding: 10px;
+        /* Compact padding for smaller screens */
+    }
+
+    .bill-form .form-description {
+        font-size: 12px;
+        /* Smaller description text */
+        margin-bottom: 15px;
+        /* Adjust spacing */
+    }
+}
